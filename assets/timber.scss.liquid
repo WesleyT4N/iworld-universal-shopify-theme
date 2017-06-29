@@ -719,14 +719,14 @@ body {
 
 .wrapper {
   @include clearfix();
-  // max-width: $siteWidth;
+  max-width: $siteWidth;
   margin: 0 auto;
   overflow: hidden;
-  // padding: 0 ($gutter / 2);
-  //
-  // @include at-query ($min, $small) {
-  //   padding: 0 $gutter;
-  // }
+  padding: 0 ($gutter / 2);
+
+  @include at-query ($min, $small) {
+    padding: 0 $gutter;
+  }
 }
 
 .main-content {
@@ -737,8 +737,9 @@ body {
 }
 
 .home {
-  margin-top: 0;
-  padding-bottom: 0;
+  margin: 0;
+  max-width: none;
+  padding: 0;
 }
 
 /*============================================================================
@@ -1361,91 +1362,7 @@ iframe {
   }
 }
 
-#indexBanner {
-  width: 100%;
-  height: 500px;
-  z-index: 0;
-  overflow: hidden;
-  .slide {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    color: $colorTextOverlay;
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      padding-top: 2.5 * $gutter;
-      @media (min-width: 769px) {
-        padding-top: 3 * $gutter;
-        padding-left: 4 * $gutter;
-        padding-right: 4 * $gutter;
-      }
-      padding-bottom: $gutter;
-      padding-left: $gutter;
-      padding-right: $gutter;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      background: rgba(0, 0, 0, .5);
-      .overlay-text {
-        margin: 0 auto;
-        max-width: 1200px;
-        h1 {
-          display: block;
-          font-size: em(48px);
-          @media (max-width: 330px) {
-            font-size: em(32px);
-          }
-          @media (min-width: 331px) and (max-width: 500px) {
-            font-size: em(36px);
-          }
-        }
-        .overlay-line {
-          display: block;
-          border-color: $colorTextOverlay;
-          width: 65%;
-        }
-        .overlay-link {
-          display: inline-block;
-          margin-top: $gutter;
-          padding: 8px 24px 8px 24px;
-          color: $colorTextOverlay;
-          font-size: em(36px);
-          border: 2px solid $colorTextOverlay;
-          transition: .2s ease;
-          &:hover, &:focus, &:active {
-            background: rgba(255, 255, 255, .75);
-            border-color: rgba(255, 255, 255, .75);
-            color: black;
-          }
-        }
-      }
-    }
-    img {
-      z-index: 0;
-      flex-shrink: 0;
-      min-width:100%;
-      min-height:100%;
-      max-width: none;
-      // height: 100%;
-      // min-width: 100%;
-      // max-width: none;
-      // object-fit: cover;
-    }
-  }
-  .slick-dots {
-    z-index: 2;
-  }
-  .slick-dots>li>button::before {
-    font-size: 14px;
-    color: white;
-  }
-}
+
 /*============================================================================
 #Forms
 ==============================================================================*/
@@ -1858,9 +1775,9 @@ remaining accessible to screen readers (h5bp.com)
 ==============================================================================*/
 .site-header {
   // padding: ($gutter / 2) 0;
-  padding: 72px 36px 16px 36px;
+  padding: 72px 36px 8px 36px;
   @media (min-width: 769px) {
-    padding-top: 60px;
+    padding-top: 56px;
   }
   position: relative;
   z-index: 5;
@@ -1878,35 +1795,18 @@ remaining accessible to screen readers (h5bp.com)
     }
   }
 }
-
+.logo {
+  max-width: 100%;
+  max-height: 96px;
+  @media (min-width: 769px) {
+    max-width: 300px;
+  }
+}
 .site-header__logo {
   text-align: center;
   margin: 0 auto;
-  max-width: 100%;
 
-  @include at-query ($min, $large) {
-    text-align: left;
-  }
 
-  a {
-    font-size: 1em;
-    @media (min-width: 1024px) {
-      font-size: em(18px);
-    }
-    text-decoration: none;
-    transition: .2s ease;
-    &:hover, &:focus {
-      color: lighten($colorNavText, 33%);
-    }
-  }
-
-  a, img {
-    display: block;
-  }
-
-  img {
-    margin: 0 auto;
-  }
 }
 
 .site-header__logo-link {
@@ -1917,14 +1817,13 @@ remaining accessible to screen readers (h5bp.com)
 .site-header__cart-toggle {
   display: inline-block;
 }
+.site-header__phone {
 
+}
 .site-header__search {
   display: inline-block;
   max-width: 400px;
-  margin-top: 4px;
-  @media (min-width: 1024px) {
-    margin-top: 6px;
-  }
+  margin-top: 0px;
   width: 100%;
   text-align: right;
 }
@@ -2014,7 +1913,7 @@ remaining accessible to screen readers (h5bp.com)
     float: right;
     padding-top: 8px;
     padding-bottom: 8px;
-    height: 42.5px;
+    height: 43.33px;
   }
 
   > li {
@@ -2728,6 +2627,92 @@ remaining accessible to screen readers (h5bp.com)
 FRONT PAGE STYLES
 ====================*/
 
+#indexBanner {
+  width: 100%;
+  height: 500px;
+  z-index: 0;
+  overflow: hidden;
+  .slide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    color: $colorTextOverlay;
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding-top: 2.5 * $gutter;
+      @media (min-width: 769px) {
+        padding-top: 3 * $gutter;
+        padding-left: 4 * $gutter;
+        padding-right: 4 * $gutter;
+      }
+      padding-bottom: $gutter;
+      padding-left: $gutter;
+      padding-right: $gutter;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background: rgba(0, 0, 0, .5);
+      .overlay-text {
+        margin: 0 auto;
+        max-width: 1200px;
+        h1 {
+          display: block;
+          font-size: em(48px);
+          @media (max-width: 330px) {
+            font-size: em(32px);
+          }
+          @media (min-width: 331px) and (max-width: 500px) {
+            font-size: em(36px);
+          }
+        }
+        .overlay-line {
+          display: block;
+          border-color: $colorTextOverlay;
+          width: 65%;
+        }
+        .overlay-link {
+          display: inline-block;
+          margin-top: $gutter;
+          padding: 8px 24px 8px 24px;
+          color: $colorTextOverlay;
+          font-size: em(36px);
+          border: 2px solid $colorTextOverlay;
+          transition: .2s ease;
+          &:hover, &:focus, &:active {
+            background: rgba(255, 255, 255, .75);
+            border-color: rgba(255, 255, 255, .75);
+            color: black;
+          }
+        }
+      }
+    }
+    img {
+      z-index: 0;
+      flex-shrink: 0;
+      min-width:100%;
+      min-height:100%;
+      max-width: none;
+      // height: 100%;
+      // min-width: 100%;
+      // max-width: none;
+      // object-fit: cover;
+    }
+  }
+  .slick-dots {
+    z-index: 2;
+  }
+  .slick-dots>li>button::before {
+    font-size: 14px;
+    color: white;
+  }
+}
+
 .index-header {
   position: relative;
   background-color: black;
@@ -2803,25 +2788,74 @@ img {
 
 .featured-container {
   margin: 0;
-  .featured-item ~ .featured-item {
-
+  .featured-item:nth-child(2n) {
+    @media (min-width: 500px) and (max-width: 768px) {
+      border: 0;
+    }
   }
-
+  .featured-item:last-child {
+    border: 0;
+  }
   .featured-item {
-    border-bottom: 2px solid $colorTextOverlay;
-    @media (min-width: 490px) {
-      border-bottom: 0;
+    @media (min-width: 500px) and (max-width: 768px) {
       border-right: 2px solid $colorTextOverlay;
+    }
+    @media (min-width: 769px) {
+      border-right: 2px solid $colorTextOverlay;
+      border-bottom: 0;
     }
     position: relative;
     padding: 0;
+    &:hover > .featured-overlay {
+      bottom: 0px;
+    }
     .featured-overlay {
       position: absolute;
-      bottom: 0;
+      bottom: -92px;
       left: 0;
       width: 100%;
       background: rgba(0, 0, 0, .5);
       color: white;
+      transition: .2s ease;
+      // &:hover, &:focus, &:active {
+      //   bottom: 0px
+      // }
+      h5 {
+        padding-top: 8px;
+        padding-left: 16px;
+        a {
+          font-size: em(18px);
+          color: $colorTextOverlay;
+        }
+      }
+      .index-price {
+        float: right;
+        padding-right: 16px;
+        padding-bottom: 2px;
+      }
+      hr {
+        width: 93%;
+        margin: 0 auto;
+        margin-top: 10px;
+      }
+      .overlay-link {
+        margin-top: .5 * $gutter;
+        margin-bottom: 16px;
+        margin-left: $gutter;
+        margin-right: $gutter;
+        text-align: center;
+        display: block;
+        padding: 8px 24px 8px 24px;
+        color: $colorTextOverlay;
+        font-size: em(24px);
+        border: 2px solid $colorTextOverlay;
+        transition: .2s ease;
+        &:hover, &:focus, &:active {
+          background: rgba(255, 255, 255, .75);
+          border-color: rgba(255, 255, 255, .75);
+          color: black;
+        }
+      }
     }
   }
 }

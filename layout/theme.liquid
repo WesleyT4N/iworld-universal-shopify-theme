@@ -150,7 +150,7 @@
   {% endif %}
   <div id="PageContainer" class="is-moved-by-drawer">
     <header class="site-header" role="banner">
-      <div class="wrapper">
+      <div>
 
         <div class="grid--full grid--table">
           <div class="grid__item large--one-half">
@@ -158,21 +158,21 @@
               Use the uploaded logo from theme settings if enabled.
               Site name gets precedence with H1 tag on homepage, div on other pages.
             {% endcomment %}
-            {% if template == 'index' %}
+            <!-- {% if template == 'index' %}
               <h1 class="site-header__logo large--left" itemscope itemtype="http://schema.org/Organization">
             {% else %}
               <div class="h1 site-header__logo large--left" itemscope itemtype="http://schema.org/Organization">
-            {% endif %}
-              <a href="/" itemprop="url">iW<i id="globe" class="fa fa-globe" aria-hidden="true"></i>RLD UNIVERSAL</a>
-            {% if template == 'index' %}
+            {% endif %} -->
+              <a href="/" class="site-header__logo" itemprop="url"><img class="logo" src="{{ 'logo3.svg' | asset_url }}" alt="{{ shop.name }}" itemprop="logo"> </a>
+            <!-- {% if template == 'index' %}
               </h1>
             {% else %}
               </div>
-            {% endif %}
+            {% endif %} -->
           </div>
           <div class="grid__item large--one-half large--text-right medium-down--hide">
 
-
+            <h2 class="site-header__phone">999-999-9999</h2>
             {% comment %}
               If customer accounts are enabled, provide login and create account links
             {% endcomment %}
@@ -203,7 +203,7 @@
     </header>
 
     <nav class="nav-bar" role="navigation">
-      <div class="wrapper">
+      <div>
         <div class="medium-down--hide">
           {% comment %}
             List out your main-menu linklist (default)
