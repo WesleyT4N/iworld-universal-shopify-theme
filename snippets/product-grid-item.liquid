@@ -37,7 +37,7 @@
   {% assign sold_out = false %}
 {% endif %}
 
-<div class="grid__item {{ grid_item_width }}">
+<div class="grid__item {{ grid_item_width }} {% if page_title == 'Collections' %} collection-featured-item {% else %} collection-item {% endif %}">
 
   {% comment %}
     Link to your product with the 'within: collection' filter for the link to be aware of the collection.
@@ -54,11 +54,13 @@
   <a href="{{ product.url | within: collection }}" class="grid__image">
     <img src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
   </a>
-
-  <p class="h6">
+  <div class="product-overlay">
+  <p class="h5">
     <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
   </p>
-  <p>
+
+  <hr />
+  <h6 class="index-price">
     {% comment %}
       You can show a leading 'from' or 'up to' by checking 'product.price_varies'
       if your variants have different prices.
@@ -86,6 +88,7 @@
       <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
       <br><s>{{ product.compare_at_price | money }}</s>
     {% endif %}
-  </p>
-
+  </h6>
+  <a href="{{ product.url | within: collection }}" class="overlay-link">BUY NOW</a>
+</div>
 </div>

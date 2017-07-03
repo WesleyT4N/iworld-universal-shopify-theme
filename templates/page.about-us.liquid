@@ -1,0 +1,28 @@
+{% include 'phone_number' %}
+<div class="grid">
+
+  <div class="grid__item large--two-thirds push--large--one-sixth">
+
+    <h1>{{ page.title | upcase }}</h1>
+
+    {% comment %}
+      Regular page content goes here.
+    {% endcomment %}
+    <h2 class="subheader">WHO WE ARE</h2>
+    <p class="about-text">
+      iWorld Universal is a smartphone reseller and supplier offering new and refurbished smartphones for reasonable prices.
+      Looking for a phone but don't want to pay the premium that the local Apple store or carrier charges you?
+      Take a look at our selection of smartphones instead to find a better deal.
+    </p>
+    <h2 class="subheader">WHERE WE ARE LOCATED</h2>
+    <p class="about-text">
+      We ship from the state of New Jersey in the United States.
+      Expect shipping times to vary based on your location.
+    </p>
+    <h2 class="subheader">HAVE A SPECIFIC QUESTION?</h2>
+    <p class="about-text">
+      Call us at {{ phone_number }} or send us a message through our <a href="/pages/contact-us">contact page</a>.
+    </p>
+  </div>
+
+</div>

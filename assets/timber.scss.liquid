@@ -82,10 +82,11 @@ $colorPrimary: {{ settings.color_primary }};
 $colorSecondary: {{ settings.color_secondary }};
 
 // Button colors
-$colorBtnPrimary: $colorPrimary;
-$colorBtnPrimaryHover: darken($colorBtnPrimary, 10%);
-$colorBtnPrimaryActive: darken($colorBtnPrimaryHover, 10%);
-$colorBtnPrimaryText: #fff;
+$colorBtnPrimary: #fff;
+$colorBtnPrimaryText: $colorPrimary;
+$colorBtnPrimaryHover: $colorPrimary;
+$colorBtnPrimaryActive: $colorBtnPrimaryText;
+
 
 $colorBtnSecondary: $colorSecondary;
 $colorBtnSecondaryHover: darken($colorBtnSecondary, 10%);
@@ -1060,6 +1061,7 @@ hr {
 }
 
 .rte--header {
+  font-size: em(20px);
   margin-bottom: 0;
 }
 
@@ -1094,17 +1096,18 @@ html input[disabled] {
   width: auto;
   margin: 0;
   line-height: 1.42;
-  font-weight: bold;
+  font-size: em(18px);
   text-decoration: none;
   text-align: center;
   vertical-align: middle;
   white-space: nowrap;
   cursor: pointer;
-  border: 1px solid transparent;
+  border: 2px solid $colorBtnPrimaryText;
+  border-radius: 0;
+  transition: .2s ease;
   @include user-select(none);
   -webkit-appearance: none;
   -moz-appearance: none;
-  border-radius: $radius;
 
   /*================ Set primary button colors - can override later ================*/
   background-color: $colorBtnPrimary;
@@ -1112,13 +1115,13 @@ html input[disabled] {
 
   &:hover {
     background-color: $colorBtnPrimaryHover;
-    color: $colorBtnPrimaryText;
+    color: $colorBtnPrimary;
   }
 
   &:active,
   &:focus {
     background-color: $colorBtnPrimaryActive;
-    color: $colorBtnPrimaryText;
+    color: $colorBtnPrimary;
   }
 
   &[disabled],
@@ -1160,6 +1163,16 @@ html input[disabled] {
   width: 100%;
 }
 
+#AddToCart {
+  background-color: $colorNav;
+  border: 2px solid $colorPrimary;
+  color: $colorPrimary;
+  transition: .2s ease;
+  &:hover, &:active, &:focus {
+    background-color: $colorPrimary;
+    color: $colorNav;
+  }
+}
 /*================ Force an input/button to look like a text link ================*/
 .text-link {
   display: inline;
@@ -1454,7 +1467,22 @@ select {
     width: 100%;
   }
 }
-
+.input-full {
+  border-radius: 0;
+  font-size: em(18px);
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  padding-bottom: 4px;
+  border-bottom: 2px solid $colorPrimary;
+  &:hover, &:focus {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid $colorPrimary;
+    outline: none;
+  }
+}
 textarea {
   min-height: 100px;
 }
@@ -1616,7 +1644,7 @@ label.error {
 
 .input-group .btn,
 .input-group .input-group-field {
-  height: 37px;
+  // height: 37px;
 }
 
 .input-group .input-group-field {
@@ -1775,7 +1803,7 @@ remaining accessible to screen readers (h5bp.com)
 ==============================================================================*/
 .site-header {
   // padding: ($gutter / 2) 0;
-  padding: 72px 36px 8px 36px;
+  padding: 76px 36px 8px 36px;
   @media (min-width: 769px) {
     padding-top: 56px;
   }
@@ -1827,7 +1855,14 @@ remaining accessible to screen readers (h5bp.com)
   width: 100%;
   text-align: right;
 }
-
+.search-container {
+  .search-bar {
+    text-align: center;
+    input {
+      width: 75%;
+    }
+  }
+}
 .search-bar {
 
   width: 100%;
@@ -1847,8 +1882,10 @@ remaining accessible to screen readers (h5bp.com)
   }
   .search-btn {
     border-radius: 0;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
     margin: 0;
     background-color: white;
     color: $colorPrimary;
@@ -1886,6 +1923,7 @@ remaining accessible to screen readers (h5bp.com)
 
 .site-nav {
   font-size: em(16px);
+  height: 43.33px;
   cursor: default;
   margin: 0 0 0 (-$gutter / 2);
   z-index: 5;
@@ -1923,42 +1961,40 @@ remaining accessible to screen readers (h5bp.com)
 
 /*================ Home to hamburger and cart that toggle drawers ================*/
 .site-nav--mobile {
+  padding-top: $gutter /2;
+  height: 100%;
   @extend .site-nav;
-
   .text-right & {
     margin: 0 (-$gutter / 2) 0 0;
   }
   .js-drawer-open-left, .js-drawer-open-right {
     transition: .2s ease;
-    font-size: 18px;
+    font-size: em(18px);
     &:hover, &:focus, &:active {
         color: lighten($colorNavText, 33%);
     }
   }
 }
-
 .site-nav__link {
   display: block;
   text-decoration: none;
-  padding: $gutter / 2;
   white-space: nowrap;
-
+  padding: $gutter / 2;
   &:hover,
   &:active,
   &:focus {
 
   }
 
-
   .icon-arrow-down {
-    position: relative;
-    top: -2px;
+    // position: relative;
+    // top: -2px;
     font-size: 10px;
     padding-left: $gutter / 4;
   }
 
   .site-nav--active > & {
-    font-weight: bold;
+    // font-weight: bold;
   }
 
 
@@ -1971,19 +2007,24 @@ remaining accessible to screen readers (h5bp.com)
 .site-nav__dropdown {
   display: none;
   position: absolute;
-  left: 0;
+  // left: 0;
+  width: 123px;
   margin: 0;
-  z-index: $zindexNavDropdowns;
+  z-index: 20;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.24);
 
   .supports-no-touch .site-nav--has-dropdown:hover &,
   .site-nav--has-dropdown.nav-hover &,
   .nav-focus + & {
     display: block;
   }
-
+  li {
+    height: 100%;
+    border-bottom: 2px solid $colorSecondary;
+  }
   a {
+    height: 100%;
     background-color: $colorNav;
-
     &:hover,
     &:active,
     &:focus {
@@ -2260,11 +2301,45 @@ remaining accessible to screen readers (h5bp.com)
   background-color: $colorFooterBg;
   // padding: $gutter 0;
   color: $colorFooterText;
-  padding: $gutter $gutter * 2 $gutter $gutter * 2;
+  padding: $gutter 0 $gutter 0;
   // @include at-query ($min, $large) {
   //   padding: ($gutter * 2) 0;
   // }
   box-shadow: 0 -2px 4px rgba(0,0,0,0.12), 0 -2px 4px rgba(0,0,0,0.24);
+}
+.footer-sitemap {
+  margin: 0;
+  list-style: none;
+  li {
+    @media (min-width: 481px) {
+      display: inline-block;
+    }
+    display: block;
+    margin-left: 8px;
+    margin-right: 8px;
+    border: 2px solid $colorPrimary;
+    font-size: em(20px);
+    padding: 8px 16px 8px 16px;
+    transition: .2s ease;
+    color: $colorPrimary;
+    &:hover, &:active, &:focus {
+      background-color: $colorPrimary;
+      color: $colorNav;
+    }
+    a {
+      color: inherit;
+    }
+
+  }
+}
+.footer-message {
+  font-size: em(24px);
+  margin-bottom: 0;
+  margin-top: 8px;
+  a {
+    color: inherit;
+    transition: .2s ease;
+  }
 }
 
 /*============================================================================
@@ -2333,7 +2408,9 @@ remaining accessible to screen readers (h5bp.com)
   }
 }
 
-
+.product-description {
+  font-size: em(20px);
+}
 /*============================================================================
 #Notes and Form Feedback
 ==============================================================================*/
@@ -2788,6 +2865,7 @@ img {
 
 .featured-container {
   margin: 0;
+
   .featured-item:nth-child(2n) {
     @media (min-width: 500px) and (max-width: 768px) {
       border: 0;
@@ -2797,6 +2875,11 @@ img {
     border: 0;
   }
   .featured-item {
+    height: 300px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
     @media (min-width: 500px) and (max-width: 768px) {
       border-right: 2px solid $colorTextOverlay;
     }
@@ -2809,34 +2892,38 @@ img {
     &:hover > .featured-overlay {
       bottom: 0px;
     }
+    img {
+      flex-shrink: 0;
+      height: 300px;
+      max-width: none;
+    }
     .featured-overlay {
       position: absolute;
-      bottom: -92px;
+      bottom: -122px;
       left: 0;
       width: 100%;
+      text-align: center;
       background: rgba(0, 0, 0, .5);
       color: white;
       transition: .2s ease;
-      // &:hover, &:focus, &:active {
-      //   bottom: 0px
-      // }
       h5 {
         padding-top: 8px;
-        padding-left: 16px;
+        padding-left: 4px;
+        padding-right: 4px;
         a {
           font-size: em(18px);
           color: $colorTextOverlay;
         }
       }
       .index-price {
-        float: right;
-        padding-right: 16px;
-        padding-bottom: 2px;
+        font-size: em(18px);
+        text-align: center;
       }
       hr {
         width: 93%;
         margin: 0 auto;
         margin-top: 10px;
+        margin-bottom: 10px;
       }
       .overlay-link {
         margin-top: .5 * $gutter;
@@ -2860,6 +2947,172 @@ img {
   }
 }
 
-.featured-container:nth-child(3) {
-  color: blue;
+/*===========================
+Collection and Product page styles
+============================*/
+.collection-item:last-child {
+  @media (min-width: 769px) {
+  margin-right: 0px;
+}
+}
+.collection-container {
+  margin-top: 8px;
+ .collection-featured-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+    height: 250px;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    margin-right: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.24);
+    img {
+      flex-shrink: 0;
+      height: 300px;
+      max-width: none;
+    }
+    &:hover > .product-overlay {
+      bottom: 0px;
+    }
+    .product-overlay {
+      position: absolute;
+      bottom: -122px;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, .5);
+      color: white;
+      transition: .2s ease;
+      text-align: center;
+      h5 {
+        padding-top: 8px;
+        padding-left: 4px;
+        padding-right: 4px;
+        a {
+          font-size: em(18px);
+          color: $colorTextOverlay;
+        }
+      }
+      .index-price {
+        font-size: em(18px);
+        text-align: center;
+      }
+      hr {
+        width: 93%;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .overlay-link {
+        margin-top: .5 * $gutter;
+        margin-bottom: 16px;
+        margin-left: $gutter;
+        margin-right: $gutter;
+        text-align: center;
+        display: block;
+        padding: 8px 24px 8px 24px;
+        color: $colorTextOverlay;
+        font-size: em(24px);
+        border: 2px solid $colorTextOverlay;
+        transition: .2s ease;
+        &:hover, &:focus, &:active {
+          background: rgba(255, 255, 255, .75);
+          border-color: rgba(255, 255, 255, .75);
+          color: black;
+        }
+      }
+    }
+  }
+}
+// General grid item
+
+.collection-item {
+    width: 100%;
+    @media (max-width: 500px) {
+      margin-right: 16px;
+      margin-left: 0;
+    }
+    @media (min-width: 501px) and (max-width: 1199px) {
+      max-width: 47%;
+    }
+    @media (min-width: 1200px) {
+      max-width: 31%;
+    }
+
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+    height: 250px;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+
+    box-shadow: 0 2px 4px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.24);
+    img {
+      flex-shrink: 0;
+      height: 300px;
+      max-width: none;
+    }
+    &:hover > .product-overlay {
+      bottom: 0px;
+    }
+    .product-overlay {
+      position: absolute;
+      bottom: -122px;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, .5);
+      color: white;
+      transition: .2s ease;
+      text-align: center;
+      h5 {
+        padding-top: 8px;
+        a {
+          font-size: em(18px);
+          color: $colorTextOverlay;
+        }
+      }
+      .index-price {
+        font-size: em(18px);
+        text-align: center;
+      }
+      hr {
+        width: 93%;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .overlay-link {
+        margin-top: .5 * $gutter;
+        margin-bottom: 16px;
+        margin-left: $gutter;
+        margin-right: $gutter;
+        text-align: center;
+        display: block;
+        padding: 8px 24px 8px 24px;
+        color: $colorTextOverlay;
+        font-size: em(24px);
+        border: 2px solid $colorTextOverlay;
+        transition: .2s ease;
+        &:hover, &:focus, &:active {
+          background: rgba(255, 255, 255, .75);
+          border-color: rgba(255, 255, 255, .75);
+          color: black;
+        }
+      }
+    }
+}
+.see-more {
+  font-size: em(20px);
+}
+
+/*=============================
+About Page Styles
+===============================*/
+
+.about-text {
+  font-size: em(20px);
 }
