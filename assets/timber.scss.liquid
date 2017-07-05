@@ -1092,7 +1092,7 @@ html input[disabled] {
 .btn,
 .rte .btn {
   display: inline-block;
-  padding: 8px 10px;
+  padding: 8px 16px;
   width: auto;
   margin: 0;
   line-height: 1.42;
@@ -1135,17 +1135,11 @@ html input[disabled] {
 .btn--secondary,
 .rte .btn--secondary {
   @extend .btn;
-  background-color: $colorBtnSecondary;
+  background-color: $colorNav;
 
-  &:hover {
-    background-color: $colorBtnSecondaryHover;
-    color: $colorBtnSecondaryText;
-  }
-
-  &:active,
-  &:focus {
-    background-color: $colorBtnSecondaryActive;
-    color: $colorBtnSecondaryText;
+  &:hover, &:active, &:focus {
+    background-color: $colorPrimary;
+    color: $colorNav;
   }
 }
 
@@ -1474,8 +1468,10 @@ select {
   border-left: 0;
   border-right: 0;
   padding-bottom: 4px;
-  border-bottom: 2px solid $colorPrimary;
-  &:hover, &:focus {
+  border-bottom: 2px solid $colorDrawerBorder;
+  transition: .2s ease;
+
+  &:hover, &:focus, &:active {
     border-top: 0;
     border-left: 0;
     border-right: 0;
@@ -1874,10 +1870,12 @@ remaining accessible to screen readers (h5bp.com)
     margin-right: 8px;
     padding: 2px 2px 2px 2px;
     font-size: em(20px);
-    border-bottom: 2px solid $colorPrimary;
+    border-bottom: 2px solid $colorDrawerBorder;
     vertical-align: bottom;
-    &:focus {
+    transition: .2s ease;
+    &:hover, &:active, &:focus {
       outline: none;
+      border-color: $colorPrimary;
     }
   }
   .search-btn {
@@ -2625,6 +2623,7 @@ remaining accessible to screen readers (h5bp.com)
   overflow: visible;
 
   input {
+    border-radius: 0px;
     display: block;
     background: none;
     text-align: center;
@@ -2640,16 +2639,17 @@ remaining accessible to screen readers (h5bp.com)
   display: block;
   top: 0;
   bottom: 0;
-  border: 0 none;
   padding: 0 8px;
   background: none;
   text-align: center;
   overflow: hidden;
+  transition: .2s ease;
   @include user-select(none);
 
   &:hover,
   &:focus {
-    color: $colorPrimary;
+    background-color: $colorPrimary;
+    color: $colorNav;
   }
 }
 
@@ -2756,7 +2756,7 @@ FRONT PAGE STYLES
         .overlay-link {
           display: inline-block;
           margin-top: $gutter;
-          padding: 8px 24px 8px 24px;
+          padding: 8px 16px 8px 16px;
           color: $colorTextOverlay;
           font-size: em(36px);
           border: 2px solid $colorTextOverlay;
@@ -2932,7 +2932,7 @@ img {
         margin-right: $gutter;
         text-align: center;
         display: block;
-        padding: 8px 24px 8px 24px;
+        padding: 8px 16px 8px 16px;
         color: $colorTextOverlay;
         font-size: em(24px);
         border: 2px solid $colorTextOverlay;
@@ -3011,7 +3011,7 @@ Collection and Product page styles
         margin-right: $gutter;
         text-align: center;
         display: block;
-        padding: 8px 24px 8px 24px;
+        padding: 8px 16px 8px 16px;
         color: $colorTextOverlay;
         font-size: em(24px);
         border: 2px solid $colorTextOverlay;
@@ -3034,7 +3034,7 @@ Collection and Product page styles
       margin-left: 0;
     }
     @media (min-width: 501px) and (max-width: 1199px) {
-      max-width: 47%;
+      max-width: 46.5%;
     }
     @media (min-width: 1200px) {
       max-width: 31%;
@@ -3092,7 +3092,7 @@ Collection and Product page styles
         margin-right: $gutter;
         text-align: center;
         display: block;
-        padding: 8px 24px 8px 24px;
+        padding: 8px 16px 8px 16px;
         color: $colorTextOverlay;
         font-size: em(24px);
         border: 2px solid $colorTextOverlay;
@@ -3119,4 +3119,51 @@ About Page Styles
 
 .about-text {
   font-size: em(22px);
+}
+
+/*============================
+Product Page Styles
+============================*/
+
+.product-description-header {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.selector-wrapper {
+  display: inline-block;
+  margin-right: 16px;
+  label {
+    font-size: em(18px);
+  }
+}
+.quantity-selector {
+  font-size: em(18px);
+}
+.show-btn {
+  display: inline-block;
+  margin-left: 16px;
+  margin-bottom: 16px;
+}
+.product-description {
+  display: none;
+  padding: 16px 16px 16px 16px;
+  h3 {
+    margin-top: 32px;
+  }
+}
+
+/*========================
+Search Page Styles
+=========================*/
+
+.search-img {
+  height: 150px;
+}
+
+.search-price {
+  font-size: em(22px);
+}
+.search-item-title {
+  font-size: em(28px);
 }

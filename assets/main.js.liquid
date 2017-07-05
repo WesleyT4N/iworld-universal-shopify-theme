@@ -1,8 +1,22 @@
 $(document).ready(function() {
+
   $('.banner').slick({
     dots: true,
     arrows: false
     // autoplay: true,
     // autoplaySpeed: 3000
   });
+  $('.show-btn').click(function() {
+    if ($('.product-description').css('display') === 'none') {
+      $('.show-btn').text("HIDE");
+    } else {
+      $('.show-btn').text("SHOW");
+    }
+    $('.product-description').slideToggle(100);
+
+  });
+});
+
+$(window).load(function() {
+  $('.product-description').hide();
 });

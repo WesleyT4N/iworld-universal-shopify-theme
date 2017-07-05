@@ -70,9 +70,9 @@
                     {% comment %}
                       We have a featured_image, so it's likely a product
                     {% endcomment %}
-                    <div class="grid__item one-third">
+                    <div class="grid__item one-quarter">
                       <a href="{{ item.url }}" title="{{ item.title | escape }}">
-                        {{ item.featured_image.src | img_url: 'medium' | img_tag: item.featured_image.alt }}
+                        {{ item.featured_image.src | img_url: 'medium' | img_tag: item.featured_image.alt, 'search-img' }}
                       </a>
                     </div>
                   {% endif %}
@@ -80,8 +80,8 @@
                   {% comment %}
                     If we don't have a featured_image, add a push-- class to keep the alignment the same
                   {% endcomment %}
-                  <div class="grid__item two-thirds {% unless item.featured_image %}push--one-third{% endunless %}">
-                    <h2 class="h3">{{ item.title | link_to: item.url }}</h2>
+                  <div class="grid__item three-quarters {% unless item.featured_image %}push--one-quarter{% endunless %}">
+                    <h2 class="h3 search-item-title">{{ item.title | link_to: item.url }}</h2>
 
                     {% if item.price %}
                       <p>
@@ -95,14 +95,14 @@
                             {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
                           {% else %}
                             <strong>{{ 'products.product.on_sale' | t }}</strong>
-                            <span itemprop="price">{{ item.price | money }}</span>
+                            <span class="search-price" itemprop="price">{{ item.price | money }}</span>
                           {% endif %}
                         {% else %}
                           {% if item.price_varies %}
                             {% assign price = item.price | money %}
-                            <span itemprop="price">{{ 'products.general.from_text_html' | t: price: price }}</span>
+                            <span class="search-price" itemprop="price">{{ 'products.general.from_text_html' | t: price: price }}</span>
                           {% else %}
-                            <span itemprop="price">{{ item.price | money }}</span>
+                            <span class="search-price" itemprop="price">{{ item.price | money }}</span>
                           {% endif %}
                         {% endif %}
                         {% if sold_out %}
@@ -117,7 +117,7 @@
                     {% comment %}
                       Get a brief excerpt of raw text from the page/product
                     {% endcomment %}
-                    <p>{{ item.content | strip_html | truncatewords: 50 }}</p>
+                    <a href="{{ item.url }}" class="btn">BUY NOW</a>
                   </div>
                 </div>
                 {% unless forloop.last %}<hr>{% endunless %}
@@ -132,7 +132,7 @@
                   </a>
                 {% endif %}
 
-                <h5>{{ item.title | link_to: item.url }}</h5>
+                <h5 class="search-item-title">{{ item.title | link_to: item.url }}</h5>
 
                 {% if item.price %}
                   <p>
@@ -142,14 +142,14 @@
                         {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
                       {% else %}
                         <strong>{{ 'products.product.on_sale' | t }}</strong>
-                        <span itemprop="price">{{ item.price | money }}</span>
+                        <span class="search-price" itemprop="price">{{ item.price | money }}</span>
                       {% endif %}
                     {% else %}
                       {% if item.price_varies %}
                         {% assign price = item.price | money %}
-                        <span itemprop="price">{{ 'products.general.from_text_html' | t: price: price }}</span>
+                        <span class="search-price" itemprop="price">{{ 'products.general.from_text_html' | t: price: price }}</span>
                       {% else %}
-                        <span itemprop="price">{{ item.price | money }}</span>
+                        <span class="search-price" itemprop="price">{{ item.price | money }}</span>
                       {% endif %}
                     {% endif %}
                     {% if sold_out %}
@@ -160,7 +160,7 @@
                     {% endif %}
                   </p>
                 {% else %}
-                  <p>{{ item.content | strip_html | truncatewords: 50 }}</p>
+                  <a href="{{ item.url }}" class="btn">BUY NOW</a>
                 {% endif %}
               </div>
               <!-- //grid search results-->

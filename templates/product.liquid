@@ -106,37 +106,33 @@
           <input type="number" id="Quantity" name="quantity" value="1" min="1" class="quantity-selector">
 
           <button type="submit" name="add" id="AddToCart" class="btn">
-            <span id="AddToCartText">{{ 'products.product.add_to_cart' | t }}</span>
+            ADD TO CART <span class="icon icon-cart" aria-hidden="true"></span> 
           </button>
         </form>
 
       </div>
-
+      <hr />
+      <h1 class="product-description-header">Specifications</h1>
+      <btn class="btn show-btn">SHOW</btn>
       <div class="product-description rte" itemprop="description">
         {{ product.description }}
       </div>
 
+      <hr />
+      <h1>Related Products</h1>}
       {% comment %}
         If the user is on a collection product page (ie with /collections/collection-handle/products/product-handle)
         in the URL, we can show next/previous links to other products in the collection.
       {% endcomment %}
-      {% if collection %}
-        {% if collection.previous_product or collection.next_product %}
-          <p>
-            {% if collection.previous_product %}
-              <span class="left">
-                {{ 'products.general.previous_product_html' | t | link_to: collection.previous_product }}
-              </span>
+      {% for collection in product.collections %}
+        {% if collection.title != 'Home page' %}
+          {% for product in collection.products limit:4 %}
+            {% if product.available and product.title != page_title %}
+              {% include 'product-grid-item' %}
             {% endif %}
-            {% if collection.next_product %}
-              <span class="right">
-                {{ 'products.general.next_product_html' | t | link_to: collection.next_product }}
-              </span>
-            {% endif %}
-          </p>
+          {% endfor %}
         {% endif %}
-      {% endif %}
-
+      {% endfor %}
     </div>
   </div>
 
