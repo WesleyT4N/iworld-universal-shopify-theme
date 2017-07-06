@@ -88,21 +88,19 @@
             For more info on navigation within a collection
               - http://docs.shopify.com/support/your-store/collections/how-to-navigate-within-a-collection
           {% endcomment %}
-          <div class="grid large--display-table">
-            <div class="grid__item large--one-fifth large--display-table-cell medium--one-third">
+          <div class="grid">
+            <div class="grid__item one-fifth">
               <a href="{{ product.url | within: collection }}">
-                <img src="{{ product.featured_image.src | img_url: 'medium' }}" alt="{{ product.featured_image.alt | escape }}" class="grid__image">
+                <img src="{{ product.featured_image.src | img_url: 'medium' }}" alt="{{ product.featured_image.alt | escape }}" class="grid__image list-img">
               </a>
             </div>
-            <div class="grid__item large--four-fifths large--display-table-cell medium--two-thirds">
+            <div class="grid__item four-fifths">
               <div class="grid">
-                <div class="grid__item large--three-quarters medium--two-thirds">
-                  <p class="h6">{{ product.title }}</p>
-                  <div class="rte">
-                    <p>{{ product.content | strip_html | truncatewords: 30 }}</p>
-                  </div>
+                <div class="grid__item three-quarters">
+                  <p class="h5 list-item-title">{{ product.title }}</p>
+                  <a href="{{ product.url }}" class="btn list-btn">BUY NOW</a>
                 </div>
-                <div class="grid__item large--one-quarter medium--one-third">
+                <div class="grid__item one-quarter list-price">
                   {% comment %}
                     You can show a leading 'from' or 'up to' by checking 'product.price_varies'
                     if your variants have different prices.
@@ -134,7 +132,7 @@
             </div>
           </div>
         </div>
-
+        {% unless forloop.last %}<hr>{% endunless %}
       {% else %}
 
         <div class="grid__item">
@@ -145,6 +143,7 @@
       <!-- //product list output -->
 
     </div>
+
 
     {% if paginate.pages > 1 %}
       <hr>

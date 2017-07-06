@@ -72,7 +72,7 @@
                     {% endcomment %}
                     <div class="grid__item one-quarter">
                       <a href="{{ item.url }}" title="{{ item.title | escape }}">
-                        {{ item.featured_image.src | img_url: 'medium' | img_tag: item.featured_image.alt, 'search-img' }}
+                        {{ item.featured_image.src | img_url: 'medium' | img_tag: item.featured_image.alt, 'search-list-img' }}
                       </a>
                     </div>
                   {% endif %}
@@ -81,7 +81,7 @@
                     If we don't have a featured_image, add a push-- class to keep the alignment the same
                   {% endcomment %}
                   <div class="grid__item three-quarters {% unless item.featured_image %}push--one-quarter{% endunless %}">
-                    <h2 class="h3 search-item-title">{{ item.title | link_to: item.url }}</h2>
+                    <h2 class="h3 search-list-item-title">{{ item.title | link_to: item.url }}</h2>
 
                     {% if item.price %}
                       <p>
@@ -95,14 +95,14 @@
                             {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
                           {% else %}
                             <strong>{{ 'products.product.on_sale' | t }}</strong>
-                            <span class="search-price" itemprop="price">{{ item.price | money }}</span>
+                            <span class="list-price" itemprop="price">{{ item.price | money }}</span>
                           {% endif %}
                         {% else %}
                           {% if item.price_varies %}
                             {% assign price = item.price | money %}
-                            <span class="search-price" itemprop="price">{{ 'products.general.from_text_html' | t: price: price }}</span>
+                            <span class="list-price" itemprop="price">{{ 'products.general.from_text_html' | t: price: price }}</span>
                           {% else %}
-                            <span class="search-price" itemprop="price">{{ item.price | money }}</span>
+                            <span class="list-price" itemprop="price">{{ item.price | money }}</span>
                           {% endif %}
                         {% endif %}
                         {% if sold_out %}
@@ -132,7 +132,7 @@
                   </a>
                 {% endif %}
 
-                <h5 class="search-item-title">{{ item.title | link_to: item.url }}</h5>
+                <h5 class="list-item-title">{{ item.title | link_to: item.url }}</h5>
 
                 {% if item.price %}
                   <p>
@@ -142,14 +142,14 @@
                         {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
                       {% else %}
                         <strong>{{ 'products.product.on_sale' | t }}</strong>
-                        <span class="search-price" itemprop="price">{{ item.price | money }}</span>
+                        <span class="list-price" itemprop="price">{{ item.price | money }}</span>
                       {% endif %}
                     {% else %}
                       {% if item.price_varies %}
                         {% assign price = item.price | money %}
-                        <span class="search-price" itemprop="price">{{ 'products.general.from_text_html' | t: price: price }}</span>
+                        <span class="list-price" itemprop="price">{{ 'products.general.from_text_html' | t: price: price }}</span>
                       {% else %}
-                        <span class="search-price" itemprop="price">{{ item.price | money }}</span>
+                        <span class="list-price" itemprop="price">{{ item.price | money }}</span>
                       {% endif %}
                     {% endif %}
                     {% if sold_out %}
@@ -160,7 +160,7 @@
                     {% endif %}
                   </p>
                 {% else %}
-                  <a href="{{ item.url }}" class="btn">BUY NOW</a>
+                  <a href="{{ product.url }}" class="btn">BUY NOW</a>
                 {% endif %}
               </div>
               <!-- //grid search results-->
