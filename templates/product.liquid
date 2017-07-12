@@ -106,7 +106,7 @@
           <input type="number" id="Quantity" name="quantity" value="1" min="1" class="quantity-selector">
 
           <button type="submit" name="add" id="AddToCart" class="btn">
-            ADD TO CART <span class="icon icon-cart" aria-hidden="true"></span> 
+            ADD TO CART <span class="icon icon-cart" aria-hidden="true"></span>
           </button>
         </form>
 
@@ -119,20 +119,7 @@
       </div>
 
       <hr />
-      <h1>Related Products</h1>}
-      {% comment %}
-        If the user is on a collection product page (ie with /collections/collection-handle/products/product-handle)
-        in the URL, we can show next/previous links to other products in the collection.
-      {% endcomment %}
-      {% for collection in product.collections %}
-        {% if collection.title != 'Home page' %}
-          {% for product in collection.products limit:4 %}
-            {% if product.available and product.title != page_title %}
-              {% include 'product-grid-item' %}
-            {% endif %}
-          {% endfor %}
-        {% endif %}
-      {% endfor %}
+      {% include 'related-products' %}
     </div>
   </div>
 

@@ -1,54 +1,47 @@
 
+<h3><span>PHONE FEATURES</span></h3>
 <ul>
 <li>
 <div >Phone Functions</div>
-<div >Speakerphone, voice control, call timer, conference call, voice dialing, vibrating alert</div>
+<div >Speakerphone, voice control, call timer, conference call, flight mode, voice dialing, vibrating alert</div>
 </li>
 <li>
 <div >Sensors</div>
-<div >Accelerometer, ambient light sensor, proximity sensor, three-axis gyro sensor, digital compass, barometer</div>
+<div >Accelerometer, proximity sensor, barometer, gyro sensor, hall sensor, RGB sensor, heart rate, pressure sensor, geomagnetic sensor</div>
 </li>
 <li>
 <div >Additional Features</div>
-<div >Multitasking, FaceTime, AirPlay wireless streaming, AirDrop function, Wi-Fi Calling, Skyline Notification, M8 motion coprocessor</div>
+<div >Wi-Fi Miracast, MU-MIMO technology, Fast Charging, Samsung KNOX</div>
 </li>
 <li>
 <div >Security Devices</div>
-<div >Fingerprint reader</div>
+<div >Fingerprint reader, eye scan</div>
 </li>
 </ul>
 <h3><span>GENERAL</span></h3>
 <ul>
 <li>
-<div >Form Factor</div>
-<div >Touch</div>
-</li>
-<li>
 <div >SAR Value</div>
-<div >1.14 W/kg (body) / 1.08 W/kg (head), 1.18 W/kg (body) / 1.18 W/kg (head)</div>
+<div >1.55 W/kg (simultaneous), 1.01 W/kg (body) / 0.46 W/kg (head)</div>
 </li>
 <li>
 <div >Integrated Components</div>
-<div >Rear-facing camera, front-facing camera, voice recorder, navigation</div>
+<div >Rear-facing camera, front-facing camera, audio player, voice recorder, heart rate sensor, navigation</div>
 </li>
 <li>
 <div >Body Color</div>
-<div >Silver</div>
+<div >Midnight black</div>
 </li>
 <li>
 <div >Manufacturer</div>
-<div >Apple</div>
-<span itemprop="manufacturer" content="Apple"></span></li>
+<div >Samsung</div>
+<span itemprop="manufacturer" content="Samsung"></span></li>
 </ul>
 <h3><span>CELLULAR</span></h3>
 <ul>
 <li>
 <div >Technology</div>
-<div >CDMA2000 1X / GSM / WCDMA (UMTS) / TD-SCDMA, WCDMA (UMTS) / GSM</div>
-</li>
-<li>
-<div >Application Software</div>
-<div >Calculator, Calendar, Camera, Clock, Compass, Contacts, Control Center, FaceTime, Game Center, Health, Keynote, Mail, Maps, Messages, Music, Newsstand, Notes, Numbers, Pages, Passbook, Phone, Photos, Podcasts, Reminders, Safari, Siri, Stocks, Videos, Voice Memos, Weather, iBooks, iCloud</div>
+<div >CDMA2000 1X / GSM / WCDMA (UMTS)</div>
 </li>
 <li>
 <div >Type</div>
@@ -56,15 +49,15 @@
 </li>
 <li>
 <div >Integrated Components</div>
-<div >front-facing camera, navigation, rear-facing camera, voice recorder</div>
+<div >audio player, front-facing camera, heart rate sensor, navigation, rear-facing camera, voice recorder</div>
 </li>
 <li>
 <div >Navigation</div>
-<div >A-GPS, GLONASS</div>
+<div >A-GPS, BeiDou, GLONASS, GPS, Galileo</div>
 </li>
 <li>
 <div >Band</div>
-<div >WCDMA (UMTS) / GSM 850/900/1800/1900 / CDMA2000 1X 2100/1900/800 / TD-SCDMA / AWS 1700/2100</div>
+<div >WCDMA (UMTS) / GSM 850/1900 / CDMA2000 1X 1900/800</div>
 </li>
 <li>
 <div >Mobile Broadband Generation</div>
@@ -76,296 +69,205 @@
 </li>
 <li>
 <div >Service Provider</div>
-<div >AT&amp;T, not specified, Sprint Nextel, T-Mobile</div>
+<div >AT&amp;T, MetroPCS, T-Mobile, Sprint, Verizon</div>
 </li>
 <li>
 <div >Operating System Family</div>
-<div >iOS</div>
+<div >Android</div>
 </li>
 <li>
 <div >Operating System</div>
-<div >iOS 8</div>
+<div >Android 7.0 Nougat</div>
 </li>
 <li>
 <div >Payment Technology</div>
-<div >Apple Pay</div>
+<div >Samsung Pay</div>
+</li>
+<li>
+<div >Intelligent Assistant</div>
+<div >Bixby</div>
 </li>
 <li>
 <div >SIM Card Type</div>
 <div >nano SIM</div>
 </li>
 <li>
+<div >SIM Card Slot Qty</div>
+<div >single-SIM</div>
+</li>
+<li>
 <div >Input Device</div>
-<div >Multi-touch</div>
+<div >Multi-touch, capacitive</div>
 </li>
 </ul>
 <h3><span>MISCELLANEOUS</span></h3>
 <ul>
 <li>
 <div >Compliant Standards</div>
-<div >HAC (Hearing Aid Compatible)</div>
+<div >IP68, HAC (Hearing Aid Compatible)</div>
 </li>
 <li>
 <div >Sensors</div>
-<div >accelerometer, ambient light sensor, barometer, digital compass, proximity sensor, three-axis gyro sensor</div>
+<div >RGB sensor, accelerometer, barometer, geomagnetic sensor, gyro sensor, hall sensor, heart rate, pressure sensor, proximity sensor</div>
 </li>
 <li>
 <div >Color</div>
-<div >Silver</div>
+<div >Midnight Black</div>
 </li>
 <li>
 <div >Color Category</div>
-<div >silver</div>
-</li>
-<li>
-<div >Body Material</div>
-<div >anodized aluminum, glass, stainless steel</div>
+<div >black</div>
 </li>
 </ul>
 <h3><span>MESSAGING &amp; INTERNET</span></h3>
 <ul>
-<li>
-<div >Cellular Messaging Services</div>
-<div >MMS, SMS</div>
-</li>
-<li>
-<div >Mobile Services</div>
-<div >App Store, Apple Maps, Apple Pay, Calculator, Calendar, Camera, Clock, Compass, Contacts, Control Center, FaceTime, Game Center, Health, Keynote, Mail, Maps, Messages, Music, Newsstand, Notes, Numbers, Pages, Passbook, Phone, Photos, Podcasts, Reminders, Safari, Siri, Stocks, Video Call, Videos, Voice Memos, Weather, iBooks, iCloud, iTunes Radio, iTunes Store</div>
-</li>
 <li>
 <div >Messaging Services</div>
 <div >MMS, SMS</div>
 </li>
 <li>
 <div >Supported Social Networks and Blogs</div>
-<div >Facebook, Twitter</div>
+<div >Yes</div>
 </li>
 </ul>
 <h3><span>COMMUNICATIONS</span></h3>
 <ul>
 <li>
-<div >Communication Features</div>
-<div >Internet browser, mobile Email client</div>
-</li>
-<li>
 <div >Data Transmission</div>
-<div >DC-HSDPA, EDGE, EV-DO, GPRS, FDD-LTE, HSDPA, HSPA+, HSUPA, LTE, VoLTE, TDD-LTE</div>
+<div >DC-HSDPA, DC-HSPA+, EDGE, EV-DO, FDD-LTE, GPRS, HSDPA, HSUPA, TDD-LTE, VoLTE</div>
 </li>
 <li>
-<div >4G LTE Band</div>
-<div >Band 1, Band 13, Band 17, Band 18, Band 19, Band 2, Band 20, Band 25, Band 26, Band 28, Band 29, Band 3, Band 38, Band 4, Band 39, Band 5, Band 7, Band 40, Band 8, Band 41</div>
-</li>
-<li>
-<div >Data Transmission Operating Frequency</div>
-<div >LTE 700 APT/700b/700c/700 de/800/800 DD/850/900/1800/1900/TD 1900/2100/TD 2300/TD 2500/2600/TD 2600/AWS</div>
+<div >3G UMTS Band</div>
+<div >Band 2, Band 4, Band 5</div>
 </li>
 <li>
 <div >Wireless Interface</div>
-<div >Bluetooth 4.0, IEEE 802.11a/b/g/n/ac, NFC</div>
-</li>
-</ul>
-<h3><span>DISPLAY</span></h3>
-<ul>
-<li>
-<div >Type</div>
-<div >LCD display - color</div>
-</li>
-<li>
-<div >Technology</div>
-<div >Retina HD display with IPS technology</div>
-</li>
-<li>
-<div >Display Resolution</div>
-<div >1334 x 750 pixels</div>
-</li>
-<li>
-<div >Pixel Density (ppi)</div>
-<div >326</div>
-</li>
-<li>
-<div >Contrast Ratio</div>
-<div >1400:1</div>
-</li>
-<li>
-<div >Diagonal Size</div>
-<div >4.7 in</div>
-</li>
-<li>
-<div >Diagonal Size (metric)</div>
-<div >11.9 cm</div>
-</li>
-<li>
-<div >Smartphone Diagonal Size</div>
-<div >4.7 in</div>
-</li>
-<li>
-<div >Protection</div>
-<div >fingerprint-resistant oleophobic coating</div>
-</li>
-<li>
-<div >Color Support</div>
-<div >color</div>
-</li>
-<li>
-<div >Display Languages</div>
-<div >Arabic, Brazilian Portuguese, Catalan, Chinese (simplified), Chinese (traditional), Croatian, Czech, Danish, Dutch, English, Finnish, French, German, Greek, Hebrew, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean, Malay, Norwegian, Polish, Portuguese, Romanian, Russian, Slovak, Spanish, Swedish, Thai, Turkish, UK English, US English, Ukrainian, Vietnamese</div>
-</li>
-<li>
-<div >Features</div>
-<div >Display Zoom, Dual-domain pixels, Reachability (screen shifting)</div>
+<div >ANT/ANT+, Bluetooth 5.0 LE, IEEE 802.11a/b/g/n/ac, NFC</div>
 </li>
 </ul>
 <h3><span>PROCESSOR</span></h3>
 <ul>
 <li>
-<div >Type</div>
-<div >Apple A8</div>
+<div >Clock Speed</div>
+<div >2.45 GHz</div>
+</li>
+<li>
+<div >Processor Number</div>
+<div >MSM8998</div>
 </li>
 <li>
 <div >Manufacturer</div>
-<div >Apple</div>
+<div >QUALCOMM</div>
+</li>
+<li>
+<div >Processor Core Qty</div>
+<div >Octa-core</div>
 </li>
 <li>
 <div >64-bit Architecture</div>
 <div >Yes</div>
 </li>
 </ul>
-<h3><span>MANUFACTURER WARRANTY</span></h3>
+<h3><span>DISPLAY</span></h3>
 <ul>
 <li>
-<div >Service &amp; Support</div>
-<div >Limited warranty - 1 year<br />Technical support - consulting - 90 days</div>
-</li>
-</ul>
-<h3><span>ORGANIZER</span></h3>
-<ul>
-<li>
-<div >Personal Information Management</div>
-<div >alarm clock, calculator, calendar, reminder, synchronization with PC</div>
-</li>
-</ul>
-<h3><span>CAMERA</span></h3>
-<ul>
-<li>
-<div >Digital Zoom</div>
-<div >3</div>
+<div >Technology</div>
+<div >Quad HD+ Super AMOLED</div>
 </li>
 <li>
-<div >Focus Adjustment</div>
-<div >automatic</div>
+<div >Display Resolution</div>
+<div >2960 x 1440 pixels</div>
 </li>
 <li>
-<div >Camera Light Source</div>
-<div >LED light</div>
+<div >Color Depth</div>
+<div >24-bit (16.7 million colors)</div>
+</li>
+<li>
+<div >Pixel Density (ppi)</div>
+<div >529</div>
+</li>
+<li>
+<div >Diagonal Size</div>
+<div >6.2 in</div>
+</li>
+<li>
+<div >Diagonal Size (metric)</div>
+<div >15.7 cm</div>
+</li>
+<li>
+<div >Smartphone Diagonal Size</div>
+<div >6.2 in</div>
+</li>
+<li>
+<div >Protection</div>
+<div >Corning Gorilla Glass 5 (scratch resistant glass)</div>
+</li>
+<li>
+<div >Color Support</div>
+<div >color</div>
 </li>
 <li>
 <div >Features</div>
-<div >Burst mode, Cinematic video stabilization, Continuous autofocus, FaceTime HD camera, Focus Pixels, IR filter, Multi-shots, Slow motion video, Time-lapse mode, True Tone flash, auto exposure, backside illumination sensor, face detection, iSight camera, panoramic pictures, photo and video geotagging, picture stabilizer, sapphire crystal lens cover, tap to focus, video recording, video stabilizer</div>
-</li>
-<li>
-<div >Front-facing Camera</div>
-<div >1.2 Megapixel</div>
+<div >Always-on display</div>
 </li>
 </ul>
 <h3><span>MEDIA PLAYER</span></h3>
 <ul>
 <li>
 <div >Supported Digital Video Standards</div>
-<div >AVI, MOV, M-JPEG, MPEG-4, H.264, M4V</div>
+<div >MKV, FLV, AVI, MPEG-4, WMV, ASF, 3GP, M4V, WebM, 3G2</div>
 </li>
 <li>
 <div >Supported Digital Audio Standards</div>
-<div >WAV, AAC, AIFF, PCM, Audible, MP3, Apple Lossless, AAC-LC, HE-AAC, Audible AAX, Audible AAX+, protected AAC</div>
+<div >WAV, WMA, PCM, AMR, MP3, FLAC, XMF, OGG, MIDI, M4A, apt-X, DSF, DSD, MXMF, IMY, RTTTL, RTX, OTA, DFF, MID</div>
 </li>
 </ul>
-<h3><span>ENVIRONMENTAL PARAMETERS</span></h3>
+<h3><span>MEMORY</span></h3>
 <ul>
 <li>
-<div >Min Operating Temperature</div>
-<div >32 °F</div>
-</li>
-<li>
-<div >Max Operating Temperature</div>
-<div >95 °F</div>
-</li>
-<li>
-<div >Humidity Range Operating</div>
-<div >5 - 95% (non-condensing)</div>
-</li>
-</ul>
-<h3><span>LOCATION</span></h3>
-<ul>
-<li>
-<div >Navigation Software &amp; Services</div>
-<div >Apple Maps</div>
+<div >Supported Flash Memory Cards</div>
+<div >microSDXC - up to 256 GB</div>
 </li>
 </ul>
 <h3><span>BATTERY</span></h3>
 <ul>
 <li>
-<div >Standby Time</div>
-<div >Up to 10 Days</div>
-</li>
-<li>
-<div >Technology</div>
-<div >Lithium ion</div>
-</li>
-<li>
 <div >Run Time Details</div>
-<div >Talk (WCDMA): up to 840 min<br />Standby: up to 250 hrs<br />Active online usage (WCDMA): up to 10 hrs<br />Active online usage (LTE): up to 10 hrs<br />Active online usage (Wi-Fi): up to 10 hrs<br />Playback (video): up to 11 hrs<br />Playback (audio): up to 50 hrs</div>
+<div >Talk: up to 1980 min<br />Standby: up to 96 hrs</div>
 </li>
 <li>
-<div >Run Time Details</div>
-<div >Talk (WCDMA): up to 840 min<br />Standby: up to 250 hrs<br />Active online usage (WCDMA): up to 10 hrs<br />Active online usage (LTE): up to 10 hrs<br />Active online usage (Wi-Fi): up to 11 hrs<br />Playback (video): up to 11 hrs<br />Playback (audio): up to 50 hrs</div>
+<div >Capacity</div>
+<div >3500 mAh</div>
 </li>
-</ul>
-<h3><span>NAVIGATION SYSTEM</span></h3>
-<ul>
 <li>
-<div >Navigation Software &amp; Services</div>
-<div >Apple Maps</div>
+<div >Wireless Charging</div>
+<div >Yes</div>
 </li>
 </ul>
 <h3><span>DIGITAL CAMERA</span></h3>
 <ul>
 <li>
-<div >Digital Zoom</div>
-<div >3</div>
-</li>
-<li>
-<div >Lens Aperture</div>
-<div >f/2.2</div>
-</li>
-<li>
-<div >Focus Adjustment</div>
-<div >automatic</div>
-</li>
-<li>
-<div >Camera Light Source</div>
-<div >LED light</div>
-</li>
-<li>
-<div >Video Recorder Resolutions</div>
-<div >1920 x 1080 (1080p)</div>
-</li>
-<li>
-<div >Features</div>
-<div >Burst mode, Cinematic video stabilization, Continuous autofocus, FaceTime HD camera, Focus Pixels, IR filter, Multi-shots, Slow motion video, Time-lapse mode, True Tone flash, auto exposure, backside illumination sensor, face detection, iSight camera, panoramic pictures, photo and video geotagging, picture stabilizer, sapphire crystal lens cover, tap to focus, video recording, video stabilizer</div>
+<div >Special Effects</div>
+<div >Bokeh effect, HDR</div>
 </li>
 </ul>
 <h3><span>HEADER</span></h3>
 <ul>
 <li>
 <div >Brand</div>
-<div >Apple</div>
+<div >Samsung</div>
 </li>
 <li>
 <div >Product Line</div>
-<div >Apple iPhone</div>
+<div >Samsung Galaxy</div>
 </li>
 <li>
 <div >Model</div>
-<div >6</div>
+<div >S8+</div>
+</li>
+<li>
+<div >Edition</div>
+<div >SM-G955U1</div>
 </li>
 <li>
 <div >Packaged Quantity</div>
@@ -378,97 +280,115 @@
 <div >Type</div>
 <div >touch sensitive screen (multi-touch)</div>
 </li>
+<li>
+<div >Touchscreen Technology</div>
+<div >capacitive</div>
+</li>
 </ul>
 <h3><span>FEATURES</span></h3>
 <ul>
 <li>
 <div >Sensors</div>
-<div >accelerometer, ambient light sensor, barometer, digital compass, proximity sensor, three-axis gyro sensor</div>
+<div >RGB sensor, accelerometer, barometer, geomagnetic sensor, gyro sensor, hall sensor, heart rate, pressure sensor, proximity sensor</div>
 </li>
 <li>
 <div >Phone Functions</div>
-<div >call timer, conference call, speakerphone, vibrating alert, voice control, voice dialing</div>
+<div >call timer, conference call, flight mode, speakerphone, vibrating alert, voice control, voice dialing</div>
 </li>
 <li>
 <div >Security Devices</div>
-<div >fingerprint reader</div>
+<div >eye scan, fingerprint reader</div>
 </li>
 <li>
 <div >Additional Features</div>
-<div >AirDrop function, AirPlay wireless streaming, FaceTime, M8 motion coprocessor, Skyline Notification, Wi-Fi Calling, multitasking</div>
+<div >Fast Charging, MU-MIMO technology, Samsung KNOX, Wi-Fi Miracast</div>
 </li>
 </ul>
 <h3><span>DIGITAL PLAYER (RECORDER)</span></h3>
 <ul>
 <li>
 <div >Supported Digital Audio Standards</div>
-<div >AAC, AAC-LC, AIFF, Apple Lossless, Audible, Audible AAX, HE-AAC, MP3, PCM, WAV, protected AAC</div>
+<div >AMR, DFF, MXMF, OGG, OTA, PCM, RTTTL, RTX, WAV, WMA, XMF, apt-X, DSD, DSF, FLAC, IMY, M4A, MID, MIDI, MP3</div>
 </li>
 <li>
 <div >Supported Digital Video Standards</div>
-<div >AVI, H.264, M-JPEG, M4V, MOV, MPEG-4</div>
+<div >3G2, 3GP, ASF, AVI, FLV, M4V, MKV, MPEG-4, WMV, WebM</div>
+</li>
+</ul>
+<h3><span>RAM</span></h3>
+<ul>
+<li>
+<div >Installed Size</div>
+<div >4 GB</div>
+</li>
+<li>
+<div >Technology</div>
+<div >LPDDR4 SDRAM</div>
 </li>
 </ul>
 <h3><span>FLASH MEMORY</span></h3>
 <ul>
 <li>
 <div >Internal Memory Capacity</div>
-<div >16 GB</div>
+<div >64 GB</div>
+</li>
+<li>
+<div >Max Supported Size</div>
+<div >256 GB</div>
+</li>
+<li>
+<div >Supported Flash Memory Cards</div>
+<div >microSDXC</div>
 </li>
 </ul>
-<h3><span>OPTICAL SENSOR</span></h3>
+<h3><span>REAR CAMERA</span></h3>
 <ul>
 <li>
-<div >Sensor Resolution</div>
-<div >8 pixels</div>
-</li>
-</ul>
-<h3><span>SERVICE &amp; SUPPORT DETAILS</span></h3>
-<ul>
-<li>
-<div >Type</div>
-<div >limited warranty, technical support</div>
-</li>
-<li>
-<div >Service Included</div>
-<div >consulting</div>
-</li>
-<li>
-<div >Full Contract Period</div>
-<div >1 year, 90 days</div>
+<div >Sensor Size</div>
+<div >1/2.55"</div>
 </li>
 </ul>
 <h3><span>FRONT-FACING CAMERA</span></h3>
 <ul>
 <li>
 <div >Sensor Resolution</div>
-<div >1.2 Megapixel</div>
+<div >8 Megapixel</div>
+</li>
+<li>
+<div >Lens Aperture</div>
+<div >f/1.7</div>
+</li>
+<li>
+<div >Focus Adjustment</div>
+<div >automatic</div>
 </li>
 </ul>
-<h3><span>SERVICE &amp; SUPPORT</span></h3>
+<h3><span>FRONT CAMERA</span></h3>
 <ul>
 <li>
-<div >Type</div>
-<div >1 year warranty</div>
+<div >Sensor Size</div>
+<div >1/3.6"</div>
 </li>
 </ul>
 <h3><span>DIMENSIONS &amp; WEIGHT</span></h3>
 <ul>
 <li>
 <div >Width</div>
-<div >2.64 in</div>
+<div >2.9 m</div>
 </li>
 <li>
 <div >Depth</div>
-<div >0.27 in</div>
+<div >0.32 in</div>
 </li>
 <li>
 <div >Height</div>
-<div >5.44 in</div>
+<div >6.3 in</div>
 </li>
 <li>
 <div >Weight</div>
-<div >4.55 oz</div>
+<div >6.1 oz</div>
 </li>
 </ul>
-<ul></ul>
+<p>
+  Found at cnet.com
+</p>

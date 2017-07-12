@@ -2966,8 +2966,33 @@ Collection and Product page styles
     height: 250px;
     padding-bottom: 16px;
     margin-bottom: 16px;
-    margin-right: 16px;
+
+    margin-left: 16px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.24);
+    width: 100%;
+    @media (max-width: 500px) {
+      margin-right: 16px;
+      margin-left: 0;
+    }
+    @media (min-width: 501px) and (max-width: 768px) {
+      max-width: 47.5%;
+    }
+    @media (min-width: 769px) {
+      max-width: 31%;
+    }
+    // @media (min-width: 768px) {
+    //   width: 47.5%;
+    //   margin-left: 8px;
+    //   margin-right: 8px;
+    // }
+    // @media (min-width: 1024px) {
+    //   width: 47.5%;
+    //   margin-left: 8px;
+    //   margin-right: 8px;
+    // }
+    // @media (min-width: 1280px) {
+    //   width: 18.75%;
+    // }
     img {
       flex-shrink: 0;
       height: 300px;
@@ -3029,14 +3054,15 @@ Collection and Product page styles
 
 .collection-item {
     width: 100%;
+
     @media (max-width: 500px) {
       margin-right: 16px;
       margin-left: 0;
     }
-    @media (min-width: 501px) and (max-width: 1199px) {
+    @media (min-width: 501px) and (max-width: 768px) {
       max-width: 46.5%;
     }
-    @media (min-width: 1200px) {
+    @media (min-width: 769px) {
       max-width: 31%;
     }
 
@@ -3158,21 +3184,42 @@ list view styles
 =========================*/
 
 .list-img {
-  height: 125px;
+  height: 75px;
+  margin-left: 8px;
+  @media (min-width: 481px) {
+    height: 125px;
+  }
 }
 .search-list-img {
-  height: 150px
+  height: 75px;
+  margin-left: 8px;
+  @media (min-width: 481px) {
+    height: 150px;
+  }
 }
 .list-btn {
   margin-top: 16px;
   margin-bottom: 36px;
 }
+
 .list-price {
-  font-size: em(24px);
+  font-size: em(16px);
+  margin-top: 2px;
+  text-align: right;
+  @media (min-width: 481px) {
+    font-size: em(24px);
+    margin-top: 0;
+  }
 }
 .list-item-title {
-  font-size: em(32px);
+  font-size: em(20px);
+  @media (min-width: 481px) {
+      font-size: em(32px);
+  }
 }
 .search-list-item-title {
-  font-size: em(28px);
+  font-size: em(22px);
+  @media (min-width: 481px) {
+      font-size: em(28px);
+  }
 }

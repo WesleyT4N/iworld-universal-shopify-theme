@@ -52,7 +52,7 @@
         See the snippet 'product-grid-item' for the layout.
       {% endcomment %}
       {% for product in collection.products %}
-
+        {% assign grid_item_width = 'large--one-third medium--one-half' %}
         {% include 'product-grid-item' %}
 
       {% else %}

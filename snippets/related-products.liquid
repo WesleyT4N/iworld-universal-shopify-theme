@@ -1,0 +1,15 @@
+<h1>Related Products</h1>
+
+{% comment %}
+  If the user is on a collection product page (ie with /collections/collection-handle/products/product-handle)
+  in the URL, we can show next/previous links to other products in the collection.
+{% endcomment %}
+{% for collection in product.collections %}
+  {% if collection.title != 'Home page' %}
+    {% for product in collection.products limit:3 %}
+      {% if product.available and product.title != page_title %}
+        {% include 'product-grid-item' %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
