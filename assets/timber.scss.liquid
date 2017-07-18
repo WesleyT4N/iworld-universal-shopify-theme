@@ -1926,7 +1926,7 @@ remaining accessible to screen readers (h5bp.com)
   margin: 0 0 0 (-$gutter / 2);
   z-index: 5;
   .site-nav--active {
-    border-color: $colorNavText;
+    border-bottom: 2px solid $colorNavText;
     &:hover, &:active, &:focus {
       border-color: $colorNavText;
     }
@@ -1936,13 +1936,12 @@ remaining accessible to screen readers (h5bp.com)
     margin: 0;
     display: block;
     transition: .2s ease;
-    border-bottom: 2px solid $colorNav;
     .menu-link {
       padding-top: 8px;
       padding-bottom: 8px;
     }
     &:hover, &:active, &:focus {
-      border-color: $colorNavBorder;
+      border-bottom: 2px solid $colorNavBorder;
     }
   }
   .nav-cart {
@@ -3167,9 +3166,17 @@ Product Page Styles
   font-size: em(18px);
 }
 .show-btn {
-  display: inline-block;
-  margin-left: 16px;
+  display: block;
+  margin-top: 16px;
+  margin-left: 8px;
   margin-bottom: 16px;
+  width: 250px;
+  @media (min-width: 425px) {
+    margin-top: 0;
+    display: inline-block;
+    margin-left: 16px;
+    width: auto;
+  }
 }
 .product-description {
   display: none;

@@ -82,7 +82,7 @@
       {% endif %}
     {% endif %}
     {% if sold_out %}
-      <br><strong>{{ 'products.product.sold_out' | t }}</strong>
+      - <strong class="sold-out">{{ 'products.product.sold_out' | t | upcase }}</strong>
     {% endif %}
     {% if on_sale %}
       <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
